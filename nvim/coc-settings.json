@@ -1,0 +1,5 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "json", "css", "html", "typescript", "ruby", "elixir", "vue"],
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true
+}

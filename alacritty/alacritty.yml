@@ -1,0 +1,34 @@
+key_bindings:
+  - { key: S, mods: Command, chars: "\\s" }
+  - { key: P, mods: Command, chars: "\\p" }
+  - { key: F, mods: Command|Shift, chars: "\\f" }
+  - { key: LBracket, mods: Command|Shift, chars: "\\," }
+  - { key: RBracket, mods: Command|Shift, chars: "\\." }
+  - { key: Slash, mods: Command, chars: "\\/" }
+  - { key: T, mods: Command, chars: "\x01c" }
+  - { key: W, mods: Command, chars: "\x01x" }
+  - { key: Key1, mods: Command, chars: "\x011" }
+  - { key: Key2, mods: Command, chars: "\x012" }
+  - { key: Key3, mods: Command, chars: "\x013" }
+  - { key: Key4, mods: Command, chars: "\x014" }
+  - { key: Key5, mods: Command, chars: "\x015" }
+  - { key: Key6, mods: Command, chars: "\x016" }
+  - { key: Key7, mods: Command, chars: "\x017" }
+  - { key: Key8, mods: Command, chars: "\x018" }
+  - { key: Key9, mods: Command, chars: "\x019" }
+
+window:
+  startup_mode: Maximized
+
+font:
+  size: 14.0
+  normal:
+    family: Fira Code
+    style: Regular
+
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
