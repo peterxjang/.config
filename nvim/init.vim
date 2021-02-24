@@ -74,6 +74,7 @@ nnoremap <leader>p :Files<CR>
 nnoremap <leader>f :Rg<CR>
 nnoremap <leader>, :bprev<CR>
 nnoremap <leader>. :bnext<CR>
+nnoremap <leader>w :bwipe<CR>
 nnoremap <leader>/ :Commentary<CR>
 vnoremap <leader>/ :Commentary<CR>
 
