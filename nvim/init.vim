@@ -35,6 +35,7 @@ set clipboard=unnamed
 set foldmethod=indent
 set foldlevelstart=20
 set nostartofline
+set cursorline
 
 " Buffer line
 let g:bufferline_show_bufnr = 0
