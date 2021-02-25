@@ -1,8 +1,12 @@
 /*
+
 node_modules/
+.netrwhist
+
 !.gitignore
 !alacritty/
 !coc/
 !fish/
 !karabiner/
 !nvim/
+
