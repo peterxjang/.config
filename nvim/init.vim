@@ -36,6 +36,8 @@ set foldmethod=indent
 set foldlevelstart=20
 set nostartofline
 set cursorline
+set updatetime=250
+set signcolumn=number
 
 " Buffer line
 let g:bufferline_show_bufnr = 0
