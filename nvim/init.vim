@@ -12,6 +12,8 @@ call plug#begin("~/.vim/plugged")
 	" Autocomplete/linting/formatting
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-solargraph', 'coc-elixir']
+  " Git
+	Plug 'airblade/vim-gitgutter'
 	" Language specific
 	Plug 'leafgarland/typescript-vim'
 	Plug 'posva/vim-vue'
@@ -38,6 +40,7 @@ set nostartofline
 set cursorline
 set updatetime=250
 set signcolumn=number
+set numberwidth=5
 
 " Buffer line
 let g:bufferline_show_bufnr = 0
