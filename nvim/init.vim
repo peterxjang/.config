@@ -20,13 +20,6 @@ call plug#begin("~/.vim/plugged")
 	Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
-" Syntax highlighting
-if (has("termguicolors"))
-  set termguicolors
-endif
-syntax enable
-colorscheme night-owl
-
 " Basic settings
 set splitright
 set splitbelow
@@ -41,6 +34,19 @@ set cursorline
 set updatetime=250
 set signcolumn=number
 set numberwidth=5
+if (has("termguicolors"))
+  set termguicolors
+endif
+syntax enable
+colorscheme night-owl
+
+" Remember file position
+augroup remember_position
+  autocmd!
+  let btToIgnore = ['terminal']
+  autocmd BufWinLeave ?* if index(btToIgnore, &buftype) < 0 | mkview 1
+  au BufWinEnter ?* silent! loadview 1
+augroup END
 
 " Buffer line
 let g:bufferline_show_bufnr = 0
@@ -51,20 +57,18 @@ autocmd VimEnter *
 	\ let &statusline='%{bufferline#refresh_status()}'
 		\ .bufferline#get_status_string()
 
-" Remember file position
-augroup remember_position
-  autocmd!
-  let btToIgnore = ['terminal']
-  autocmd BufWinLeave ?* if index(btToIgnore, &buftype) < 0 | mkview 1
-  au BufWinEnter ?* silent! loadview 1
-augroup END
-
 " Fuzzy finder setup
 let FZF_DEFAULT_COMMAND='fd --type f'
 if executable('rg')
   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 endif
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
+
+" VSCode specific settings
+if exists('g:vscode')
+  nmap j gj
+  nmap k gk
+endif
 
 " Key overrides
 imap <C-c> <Esc>
@@ -84,10 +88,4 @@ nnoremap <leader>. :bnext<CR>
 nnoremap <leader>w :bwipe<CR>
 nnoremap <leader>/ :Commentary<CR>
 vnoremap <leader>/ :Commentary<CR>
-
-" VSCode specific settings
-if exists('g:vscode')
-  nmap j gj
-  nmap k gk
-endif
 
