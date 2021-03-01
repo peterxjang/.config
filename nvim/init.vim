@@ -76,7 +76,8 @@ nnoremap <C-c> :noh<CR><C-c>
 inoremap <C-f> <C-o>l
 inoremap <C-b> <C-o>h
 inoremap <silent><expr> <Tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Shortcuts
 nnoremap <leader>s :w<CR>
