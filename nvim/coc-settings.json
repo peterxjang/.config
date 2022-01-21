@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["javascript", "json", "css", "html", "typescript", "ruby", "elixir", "vue"],
   "solargraph.diagnostics": true,
-  "solargraph.formatting": true
+  "solargraph.formatting": true,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh"
 }
