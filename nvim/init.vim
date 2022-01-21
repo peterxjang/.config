@@ -12,8 +12,6 @@ call plug#begin("~/.vim/plugged")
 	" Autocomplete/linting/formatting
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-solargraph', 'coc-elixir']
-  " Git
-	Plug 'airblade/vim-gitgutter'
 	" Language specific
 	Plug 'leafgarland/typescript-vim'
 	Plug 'posva/vim-vue'
@@ -39,6 +37,8 @@ if (has("termguicolors"))
 endif
 syntax enable
 colorscheme night-owl
+" set ttymouse=xterm2
+set mouse=a
 
 " Remember file position
 augroup remember_position
