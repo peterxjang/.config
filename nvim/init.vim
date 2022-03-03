@@ -16,6 +16,9 @@ call plug#begin("~/.vim/plugged")
 	Plug 'leafgarland/typescript-vim'
 	Plug 'posva/vim-vue'
 	Plug 'elixir-editors/vim-elixir'
+	" Git
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 " Basic settings
@@ -63,6 +66,12 @@ if executable('rg')
   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 endif
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
+
+" Git
+lua require('peterxjang/gitsigns')
+highlight GitSignsAdd guifg=green
+highlight GitSignsChange guifg=blue
+highlight GitSignsDelete guifg=red
 
 " VSCode specific settings
 if exists('g:vscode')
