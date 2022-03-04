@@ -2,6 +2,7 @@
 
 node_modules/
 .netrwhist
+coc/suggest.txt
 
 !.gitignore
 !alacritty/
