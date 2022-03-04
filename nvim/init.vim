@@ -33,7 +33,7 @@ set foldlevelstart=20
 set nostartofline
 set cursorline
 set updatetime=250
-set signcolumn=number
+set signcolumn=yes:1
 set numberwidth=5
 if (has("termguicolors"))
   set termguicolors
@@ -69,9 +69,12 @@ let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-s': 'split', 'ctrl-v': 'vsplit
 
 " Git
 lua require('peterxjang/gitsigns')
-highlight GitSignsAdd guifg=green
-highlight GitSignsChange guifg=blue
-highlight GitSignsDelete guifg=red
+highlight link GitSignsAdd DiffAdd
+highlight link GitSignsChange DiffChange
+highlight link GitSignsDelete DiffDelete
+highlight link GitSignsAddNr DiffAdd
+highlight link GitSignsChangeNr DiffChange
+highlight link GitSignsDeleteNr DiffDelete
 
 " VSCode specific settings
 if exists('g:vscode')
