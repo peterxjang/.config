@@ -35,6 +35,7 @@ set cursorline
 set updatetime=250
 set signcolumn=yes:1
 set numberwidth=5
+set nowrap
 if (has("termguicolors"))
   set termguicolors
 endif
