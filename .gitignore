@@ -5,9 +5,8 @@ node_modules/
 coc/suggest.txt
 
 !.gitignore
-!alacritty/
 !coc/
 !fish/
 !karabiner/
 !nvim/
-
+!kitty/
