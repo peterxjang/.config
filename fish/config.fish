@@ -1,3 +1,3 @@
-set PATH $HOME/.rbenv/bin $PATH
+set PATH /opt/homebrew/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
 rbenv init - | source
