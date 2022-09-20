@@ -3,6 +3,7 @@
 node_modules/
 .netrwhist
 coc/suggest.txt
+nvim/plugged/
 
 !.gitignore
 !coc/
