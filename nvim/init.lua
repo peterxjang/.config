@@ -50,6 +50,9 @@ require('gitsigns').setup()
 -- neoscroll
 require('neoscroll').setup()
 
+-- commentary
+vim.cmd [[autocmd FileType elixir setlocal commentstring=#\ %s]]
+
 -- emmet
 vim.cmd [[imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")]]
 
