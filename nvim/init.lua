@@ -25,6 +25,7 @@ vim.keymap.set('n', '<leader>b', ':Telescope buffers<CR>')
 vim.keymap.set('n', '<leader>f', ':Telescope live_grep<CR>')
 vim.keymap.set('n', '<leader>/', ':Commentary<CR>')
 vim.keymap.set('v', '<leader>/', ':Commentary<CR>') 
+vim.keymap.set('n', '<C-c>', ':noh<CR><C-c>')
 
 -- Basic settings
 vim.opt.splitright = true
