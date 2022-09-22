@@ -257,20 +257,20 @@
             "description": "HYPER - to CMD -",
             "manipulators": [
               {
+                "type": "basic",
                 "from": {
-                  "key_code": "hyphen",
                   "modifiers": {
                     "mandatory": ["left_gui", "left_control", "left_alt", "left_shift"]
-                  }
+                  },
+                  "key_code": "hyphen"
                 },
                 "to": [
                   {
+                    "repeat": true,
                     "key_code": "hyphen",
-                    "modifiers": ["left_gui"],
-                    "repeat": true
+                    "modifiers": ["left_gui"]
                   }
-                ],
-                "type": "basic"
+                ]
               }
             ]
           },
@@ -278,42 +278,20 @@
             "description": "HYPER = to CMD =",
             "manipulators": [
               {
+                "type": "basic",
                 "from": {
-                  "key_code": "equal_sign",
                   "modifiers": {
                     "mandatory": ["left_gui", "left_control", "left_alt", "left_shift"]
-                  }
+                  },
+                  "key_code": "equal_sign"
                 },
                 "to": [
                   {
+                    "repeat": true,
                     "key_code": "equal_sign",
-                    "modifiers": ["left_gui"],
-                    "repeat": true
+                    "modifiers": ["left_gui"]
                   }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Quit application by holding command-q",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "q",
-                  "modifiers": {
-                    "mandatory": ["command"],
-                    "optional": ["caps_lock"]
-                  }
-                },
-                "to_if_held_down": [
-                  {
-                    "key_code": "q",
-                    "modifiers": ["left_command"],
-                    "repeat": false
-                  }
-                ],
-                "type": "basic"
+                ]
               }
             ]
           }
