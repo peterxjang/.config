@@ -62,26 +62,31 @@ require('nvim-treesitter.configs').setup({ highlight = { enable = true }})
 
 -- lsp 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local	on_attach = function(client, bufnr)
+	if client.supports_method("textDocument/formatting") then
+		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = bufnr,
+			callback = function()
+				vim.lsp.buf.formatting_sync()
+			end,
+		})
+	end
+end
+
+require('lspconfig').elixirls.setup({
+	cmd = { "/usr/local/bin/elixir-ls/language_server.sh" },
+	on_attach = on_attach
+})
+
 require("null-ls").setup({
 	sources = {
 		require("null-ls").builtins.diagnostics.eslint,
 		require("null-ls").builtins.formatting.prettier,
 		require("null-ls").builtins.diagnostics.rubocop,
 		require("null-ls").builtins.formatting.rufo,
-		require("null-ls").builtins.diagnostics.credo,
-		require("null-ls").builtins.formatting.mix,
 	},
-	on_attach = function(client, bufnr)
-		if client.supports_method("textDocument/formatting") then
-			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				buffer = bufnr,
-				callback = function()
-					vim.lsp.buf.formatting_sync()
-				end,
-			})
-		end
-	end,
+	on_attach = on_attach
 })
 
