@@ -55,7 +55,7 @@ require('neoscroll').setup()
 vim.cmd [[autocmd FileType elixir setlocal commentstring=#\ %s]]
 
 -- emmet
-vim.cmd [[imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")]]
+vim.cmd [[autocmd FileType html,css,eruby,eelixir,heex imap <buffer> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")]]
 
 -- treesitter
 require('nvim-treesitter.configs').setup({ highlight = { enable = true }})
