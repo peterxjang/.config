@@ -1,0 +1,10 @@
+theme = "bogster"
+
+[keys.normal]
+"\\" = { s = ":w", p = "file_picker", "/" = "toggle_comments" }
+
+[keys.insert]
+"\\" = { s = ["normal_mode", ":w"], p = ["normal_mode", ":w", "file_picker"] }
+
+[keys.select]
+"\\" = { "/" = "toggle_comments" }

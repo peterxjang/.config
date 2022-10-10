@@ -1,0 +1,14 @@
+[[language]]
+name = "elixir"
+auto-format = true
+formatter = { command = "mix", args = ["format", "mix.exs", "-"] }
+
+[[language]]
+name = "javascript"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "babel"] }
+
+[[language]]
+name = "ruby"
+auto-format = true
+formatter = { command = "rufo" , args = ["-x"] }
