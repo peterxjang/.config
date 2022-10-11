@@ -1,4 +1,4 @@
-theme = "bogster"
+theme = "ayu_dark"
 
 [editor.cursor-shape]
 insert = "bar"
