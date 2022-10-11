@@ -1,5 +1,13 @@
 theme = "bogster"
 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.search]
+smart-case = false
+
 [keys.normal]
 "\\" = { s = ":w", p = "file_picker", "/" = "toggle_comments" }
 
