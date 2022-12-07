@@ -13,3 +13,7 @@ name = "ruby"
 auto-format = true
 config = { solargraph = { diagnostics = true, formatting = false } }
 formatter = { command = "rufo" , args = ["-x"] }
+
+[[language]]
+name = "rust"
+auto-format = true
